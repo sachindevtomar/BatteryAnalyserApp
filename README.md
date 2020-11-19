@@ -15,11 +15,11 @@
 Following are the analysis After running solution on the Sample data
 
 ### Total Devices(grouped by SerialNumber): 59
-### Faulty Devices (Battery Consumption > 30 in a day): 14
-### Good Devices (Battery Consumption <= 30 in a day): 42
-### Unknown Devices (With only single entry available in data): 3
+#### Faulty Devices (Battery Consumption > 30 in a day): 14
+#### Good Devices (Battery Consumption <= 30 in a day): 42
+#### Unknown Devices (With only single entry available in data): 3
 
-Attached the API result ![here](https://raw.githubusercontent.com/sachindevtomar/BatteryAnalyserApp/master/Result.json) (After running solution locally)
+Attached the API result [here](https://raw.githubusercontent.com/sachindevtomar/BatteryAnalyserApp/master/Result.json) (After running solution locally)
 
 ## How To Run
 
