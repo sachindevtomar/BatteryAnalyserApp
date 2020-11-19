@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatteryAnalyserApp", "BatteryAnalyserApp\BatteryAnalyserApp.csproj", "{CF0F1A1F-E02F-493D-82CE-461DEE21D458}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BatteryAnalyserApp", "BatteryAnalyserApp\BatteryAnalyserApp.csproj", "{CF0F1A1F-E02F-493D-82CE-461DEE21D458}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatteryAnalyserAppTests", "BatteryAnalyserAppTests\BatteryAnalyserAppTests.csproj", "{024A0D07-E884-4286-9B7C-D2B7B639BC57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CF0F1A1F-E02F-493D-82CE-461DEE21D458}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF0F1A1F-E02F-493D-82CE-461DEE21D458}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF0F1A1F-E02F-493D-82CE-461DEE21D458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{024A0D07-E884-4286-9B7C-D2B7B639BC57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{024A0D07-E884-4286-9B7C-D2B7B639BC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{024A0D07-E884-4286-9B7C-D2B7B639BC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{024A0D07-E884-4286-9B7C-D2B7B639BC57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

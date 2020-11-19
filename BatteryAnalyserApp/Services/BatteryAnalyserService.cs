@@ -10,7 +10,10 @@ namespace BatteryAnalyserApp.Services
 {
     public class BatteryAnalyserService : IBatteryAnalyserService
     {
-        public BatteryAnalyserService() { }
+        private readonly IWebClientWrapper webClientWrapper;
+        public BatteryAnalyserService(IWebClientWrapper webClientWrapper) {
+            this.webClientWrapper = webClientWrapper ?? throw new ArgumentNullException(nameof(webClientWrapper));
+        }
 
         public List<AnalysedResult> GetDevicesStatusWithAverage()
         {
@@ -19,20 +22,17 @@ namespace BatteryAnalyserApp.Services
             try
             {
                 //Create WebClient for downloading the battery data from Github
-                using (WebClient wc = new WebClient())
+                var batteryJSON = this.webClientWrapper.DownloadString(Constants.BatteryJSONDownloadURL);
+                batteryData = JsonConvert.DeserializeObject<List<BatteryData>>(batteryJSON);
+
+                //Group data based on SerialNumber
+                var groupedBatteryData = from bd in batteryData group bd by bd.serialNumber;
+
+                //iterate each group        
+                foreach (var serialNumberGroup in groupedBatteryData)
                 {
-                    var batteryJSON = wc.DownloadString(Constants.BatteryJSONDownloadURL);
-                    batteryData = JsonConvert.DeserializeObject<List<BatteryData>>(batteryJSON);
-
-                    //Group data based on SerialNumber
-                    var groupedBatteryData = from bd in batteryData group bd by bd.serialNumber;
-
-                    //iterate each group        
-                    foreach (var serialNumberGroup in groupedBatteryData)
-                    {
-                        //Get the battery status for every group
-                        finalBatteryStatusList.Add(GetBatteryStatusOfSerialNumberGroup(serialNumberGroup.ToList()));
-                    }
+                    //Get the battery status for every group
+                    finalBatteryStatusList.Add(GetBatteryStatusOfSerialNumberGroup(serialNumberGroup.ToList()));
                 }
             }
             catch(Exception ex)
