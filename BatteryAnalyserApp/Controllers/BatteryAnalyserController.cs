@@ -22,9 +22,18 @@ namespace BatteryAnalyserApp.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<string> GetFaultyDevices()
+        public IEnumerable<AnalysedResult> GetFaultyDevices()
         {
-            var result = this.batteryAnalyserService.GetDevicesWithFaultyBatteries();
+            List<AnalysedResult> result;
+            try
+            {
+                result = this.batteryAnalyserService.GetDevicesStatusWithAverage();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Exception Occured: " + ex.Message);
+                return null;
+            }
             return result;
         }
     }

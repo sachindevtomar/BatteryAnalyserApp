@@ -9,7 +9,7 @@ namespace BatteryAnalyserApp.Models
     {
         public BatteryData() { }
 
-        public BatteryData(int academyId, decimal batteryLevel, string employeeId, string serialNumber, DateTime timestamp)
+        public BatteryData(int academyId, double batteryLevel, string employeeId, string serialNumber, DateTime timestamp)
         {
             this.academyId = academyId;
             this.batteryLevel = batteryLevel;
@@ -18,7 +18,7 @@ namespace BatteryAnalyserApp.Models
             this.timestamp = timestamp;
         }
         public int academyId { get; set; }
-        public decimal batteryLevel { get; set; }
+        public double batteryLevel { get; set; }
         public string employeeId { get; set; }
         public string serialNumber { get; set; }
         public DateTime timestamp { get; set; }
