@@ -11,6 +11,14 @@
 4. Taking average of all the values and it will be the average battery consumption for that device.
 5. will repeat #2-#4 for each device (Using serialNumber)
 
+## Result 
+Following are the analysis After running solution on the Sample data
+
+### Total Devices(grouped by SerialNumber): 59
+### Faulty Devices (Battery Consumption > 30 in a day): 14
+### Good Devices (Battery Consumption <= 30 in a day): 42
+### Unknown Devices (With only single entry available in data): 3
+
 ## How To Run
 
 * Clone the solution.
