@@ -19,6 +19,8 @@ Following are the analysis After running solution on the Sample data
 ### Good Devices (Battery Consumption <= 30 in a day): 42
 ### Unknown Devices (With only single entry available in data): 3
 
+Attached the API result ![here](https://raw.githubusercontent.com/sachindevtomar/BatteryAnalyserApp/master/Result.json) (After running solution locally)
+
 ## How To Run
 
 * Clone the solution.
